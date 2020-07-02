@@ -1,0 +1,10 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: development
+  namespace: aim-dev
+spec:
+  chart:
+    repository: https://jfmatth.github.io/K8s-helm
+    name: aim-dev
+    version: 1.0.0
