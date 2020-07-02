@@ -7,15 +7,19 @@
   apiVersion: helm.fluxcd.io/v1
   kind: HelmRelease
   metadata:
-    name: local-dev
+    name: local
     namespace: default
   spec:
     chart:
       git: https://github.com/jfmatth/K8s-helm.git
       ref: master
       path: charts/aim-local
-      version: 1.0.0
 
     values:
-      job:
-        loadprices: false
+      jobs:
+        migrate: false
+
+      image:
+          repository: jfmatth/aim-django
+          tag: local
+          pullPolicy: Always
