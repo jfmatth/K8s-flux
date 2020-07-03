@@ -22,6 +22,10 @@ Using Flux CD and Flux Helm operators, I can maintain my clusters
     --namespace flux \
     --set helm.versions=v3
     ```
+
+    Note: If you get errors, check the following:
+    * ClusterRole,ClusterRoleBinding for flux and helm-operator
+
     
 - Install Flux
     Using https://docs.fluxcd.io/en/1.19.0/tutorials/get-started/ as a baseline.
@@ -31,12 +35,11 @@ Using Flux CD and Flux Helm operators, I can maintain my clusters
     fluxctl install \
     --git-user=${GHUSER} \
     --git-email=${GHUSER}@users.noreply.github.com \
-    --git-url=git@github.com:${GHUSER}/flux-get-started \
+    --git-url=git@github.com:${GHUSER}/K8s-helm \
     --git-path=cluster-local \
     --namespace=flux | kubectl apply -f -
     ```
 
-After the above steps are completed, Flux will begin rolling out the HelmRelease file from the cluster-local folder in this repo.  You can check the pods are being created.
-
+    Follow the instructions on putting the SSH identity key into your Repo
 
 
