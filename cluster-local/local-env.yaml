@@ -15,11 +15,11 @@
       ref: master
       path: charts/aim-local
 
-    values:
-      jobs:
-        migrate: false
+    # values:
+    #   jobs:
+    #     migrate: false
 
-      image:
-          repository: jfmatth/aim-django
-          tag: local
-          pullPolicy: Always
+    #   image:
+    #       repository: jfmatth/aim-django
+    #       tag: local
+    #       pullPolicy: Always
