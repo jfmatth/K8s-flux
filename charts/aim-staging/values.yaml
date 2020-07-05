@@ -32,7 +32,7 @@ service:
   port: 80
 
 ingress:
-  enabled: false
+  enabled: true
 
   # annotations:
   #   kubernetes.io/ingress.class: traefik
@@ -45,9 +45,9 @@ ingress:
   #   # # ingress.kubernetes.io/ssl-redirect: "true"
   #   # cert-manager.io/issuer: letsencrypt-production
 
-  # hosts:
-  #   - host: qa.stocksonthebeach.com
-  #     paths: ['/']
+  hosts:
+    - host: staging.stocksonthebeach.com
+      paths: ['/']
 
   # tls: 
   #   - secretName: cert-qa
