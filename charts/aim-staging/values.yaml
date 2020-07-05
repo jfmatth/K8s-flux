@@ -31,41 +31,28 @@ service:
   type: ClusterIP
   port: 80
 
-# ingress:
-#   enabled: false
-#   annotations: 
-#     kubernetes.io/ingress.class: nginx
-#     kubernetes.io/tls-acme: "true"
-#   hosts:
-#     - host: chart-example.local
-#       paths: []
-#   tls: []
-#   #  - secretName: chart-example-tls
-#   #    hosts:
-#   #      - chart-example.local
-
 ingress:
-  enabled: true
+  enabled: false
 
-  annotations:
-    kubernetes.io/ingress.class: traefik
-    cert-manager.io/issuer: letsencrypt-production
-    kubernetes.io/tls-acme: "true"
-    traefik.ingress.kubernetes.io/redirect-entry-point: https
+  # annotations:
+  #   kubernetes.io/ingress.class: traefik
+  #   cert-manager.io/issuer: letsencrypt-production
+  #   kubernetes.io/tls-acme: "true"
+  #   traefik.ingress.kubernetes.io/redirect-entry-point: https
 
-    # kubernetes.io/tls-acme: true
-    # # traefik.ingress.kubernetes.io/redirect-entry-point: https
-    # # ingress.kubernetes.io/ssl-redirect: "true"
-    # cert-manager.io/issuer: letsencrypt-production
+  #   # kubernetes.io/tls-acme: true
+  #   # # traefik.ingress.kubernetes.io/redirect-entry-point: https
+  #   # # ingress.kubernetes.io/ssl-redirect: "true"
+  #   # cert-manager.io/issuer: letsencrypt-production
 
-  hosts:
-    - host: qa.stocksonthebeach.com
-      paths: ['/']
+  # hosts:
+  #   - host: qa.stocksonthebeach.com
+  #     paths: ['/']
 
-  tls: 
-    - secretName: cert-qa
-      hosts:
-        - qa.stocksonthebeach.com
+  # tls: 
+  #   - secretName: cert-qa
+  #     hosts:
+  #       - qa.stocksonthebeach.com
 
 resources:
   requests:
