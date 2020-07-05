@@ -7,8 +7,8 @@
   apiVersion: helm.fluxcd.io/v1
   kind: HelmRelease
   metadata:
-    name: development
-    namespace: aim-dev
+    name: staging
+    namespace: aim-staging
   spec:
     chart:
       git: https://github.com/jfmatth/K8s-flux.git

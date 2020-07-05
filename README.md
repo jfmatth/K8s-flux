@@ -44,6 +44,8 @@ Using Flux CD and Flux Helm operators, I can maintain my clusters
 
 ## Staging / Production (DO) cluster
 
+**CONNECT TO YOUR PRODUCTION CLUSTER**
+
 - Install Helm Operator CRD 
     Using https://docs.fluxcd.io/projects/helm-operator/en/stable/get-started/quickstart/
 
