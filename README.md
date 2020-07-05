@@ -35,7 +35,7 @@ Using Flux CD and Flux Helm operators, I can maintain my clusters
     fluxctl install \
     --git-user=${GHUSER} \
     --git-email=${GHUSER}@users.noreply.github.com \
-    --git-url=git@github.com:${GHUSER}/K8s-helm \
+    --git-url=git@github.com:${GHUSER}/K8s-flux \
     --git-path=cluster-local \
     --namespace=flux | kubectl apply -f -
     ```
@@ -73,7 +73,7 @@ Using Flux CD and Flux Helm operators, I can maintain my clusters
     fluxctl install \
     --git-user=${GHUSER} \
     --git-email=${GHUSER}@users.noreply.github.com \
-    --git-url=git@github.com:${GHUSER}/K8s-helm \
+    --git-url=git@github.com:${GHUSER}/K8s-flux \
     --git-path=cluster-production \
     --namespace=flux | kubectl apply -f -
     ```
