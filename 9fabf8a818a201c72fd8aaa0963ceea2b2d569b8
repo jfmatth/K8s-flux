@@ -1,0 +1,1 @@
+{"jobID":"c9dcef02-251f-c3d6-57fb-d0c6df4f8ba2","spec":{"type":"policy","cause":{"Message":"","User":"John Matthew \u003cjohn@compunique.com\u003e"},"spec":{"default:helmrelease/local":{"add":{"locked":"true","locked_msg":"","locked_user":"John Matthew \u003cjohn@compunique.com\u003e"},"remove":{}}}},"result":null}
