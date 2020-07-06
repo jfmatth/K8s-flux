@@ -1,0 +1,1 @@
+{"jobID":"ebcce404-05a7-228c-41f0-4f7c6be7dd7a","spec":{"type":"policy","cause":{"Message":"","User":"John Matthew \u003cjohn@compunique.com\u003e"},"spec":{"default:helmrelease/local":{"add":{"automated":"true"},"remove":{}}}},"result":null}
