@@ -1,19 +1,14 @@
-# ---
-#   apiVersion: v1
-#   kind: Namespace
-#   metadata:
-#     name: default
 ---
-  apiVersion: helm.fluxcd.io/v1
-  kind: HelmRelease
-  metadata:
-    name: local
-    namespace: default
-  spec:
-    chart:
-      git: https://github.com/jfmatth/K8s-flux.git
-      ref: master
-      path: charts/aim-local
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: local
+  namespace: default
+spec:
+  chart:
+    git: https://github.com/jfmatth/K8s-flux.git
+    ref: master
+    path: charts/aim-local
 
     values:
       jobs:
