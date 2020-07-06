@@ -10,7 +10,7 @@ spec:
     ref: master
     path: charts/aim-local
 
-    values:
-      jobs:
-        migrate: false
+  values:
+    jobs:
+      migrate: false
 

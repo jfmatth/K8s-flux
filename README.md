@@ -4,6 +4,11 @@ Using Flux CD and Flux Helm operators, I can maintain my clusters
 - Development (cluster on DO)
 - Production (cluster on DO)
 
+
+```
+export FLUX_FORWARD_NAMESPACE=flux
+```
+
 ## Local (laptop) cluster
 
 - Install Helm Operator CRD 
