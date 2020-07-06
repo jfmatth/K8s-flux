@@ -4,8 +4,6 @@ kind: HelmRelease
 metadata:
   name: local
   namespace: default
-  annotations:
-    fluxcd.io/automated: 'true'
 spec:
   chart:
     git: https://github.com/jfmatth/K8s-flux.git
