@@ -8,6 +8,9 @@ metadata:
     fluxcd.io/locked_user: John Matthew <john@compunique.com>
     fluxcd.io/locked: 'true'
 spec:
+  rollback:
+    enable: true
+
   chart:
     git: https://github.com/jfmatth/K8s-flux.git
     ref: master
