@@ -1,21 +1,21 @@
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: aim-staging
+# ---
+# apiVersion: v1
+# kind: Namespace
+# metadata:
+#   name: aim-staging
 
----
-apiVersion: helm.fluxcd.io/v1
-kind: HelmRelease
-metadata:
-  name: aim-staging
-  namespace: aim-staging
-spec:
-  chart:
-    git: https://github.com/jfmatth/K8s-flux.git
-    ref: master
-    path: charts/aim-staging
+# ---
+# apiVersion: helm.fluxcd.io/v1
+# kind: HelmRelease
+# metadata:
+#   name: aim-staging
+#   namespace: aim-staging
+# spec:
+#   chart:
+#     git: https://github.com/jfmatth/K8s-flux.git
+#     ref: master
+#     path: charts/aim-staging
   
-  values:
-    jobs:
-      migrate: false
+#   values:
+#     jobs:
+#       migrate: false
