@@ -1,8 +1,7 @@
 # K8s-flux
 Using Flux CD and Flux Helm operators, I can maintain my clusters
-- Local (laptop)
-- Development (cluster on DO)
-- Production (cluster on DO)
+- Local cluster (laptop)
+- Production cluster (cluster on DO)
 
 
 ```
