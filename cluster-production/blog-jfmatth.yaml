@@ -56,15 +56,12 @@ kind: Ingress
 metadata:
   name: blog-jfmatth
   namespace: blog-jfmatth
-  annotations:
-    # traefik.ingress.kubernetes.io/rewrite-target: "/"
-    # nginx.ingress.kubernetes.io/rewrite-target: "/"
 spec:
   rules:
-  - host: dev.stocksonthebeach.com
+  - host: blog.stocksonthebeach.com
     http:
       paths:
-      - path: /blog
+      - path: /
         backend:
           serviceName: blog-jfmatth
           servicePort: 80
