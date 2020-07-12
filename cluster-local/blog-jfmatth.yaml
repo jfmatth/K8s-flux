@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: blog-jfmatth
-        image: jfmatth/blog-jfmatth:0957b6bff3371692ccc9fc796194d7fbd4c78349
+        image: jfmatth/blog-jfmatth:bc8a00de0f5025fa94761033e82ea2e39d42adf1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
