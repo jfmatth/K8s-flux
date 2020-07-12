@@ -58,7 +58,6 @@ metadata:
   namespace: blog-jfmatth
   annotations:
     traefik.ingress.kubernetes.io/rewrite-target: "/"
-        # traefik.ingress.kubernetes.io/rule-type: "PathPrefixStrip"
 spec:
   rules:
   - host: master.mshome.net
