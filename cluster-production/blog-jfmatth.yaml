@@ -58,7 +58,8 @@ metadata:
   namespace: blog-jfmatth
   annotations:
     traefik.ingress.kubernetes.io/rewrite-target: "/"
-        # traefik.ingress.kubernetes.io/rule-type: "PathPrefixStrip"
+    # traefik.ingress.kubernetes.io/rule-type: "PathPrefixStrip"
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
 spec:
   rules:
   - host: dev.stocksonthebeach.com
