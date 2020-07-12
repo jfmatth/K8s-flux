@@ -8,8 +8,12 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    fluxcd.io/automated: "true"
+
   name: blog-jfmatth
   namespace: blog-jfmatth
+  
   labels:
     app: static-site
 spec:
