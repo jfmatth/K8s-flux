@@ -19,4 +19,10 @@
 #   values:
 #     jobs:
 #       migrate: false
-
+#       loadprices: true
+#       ftplogin: changeme
+#       ftppass: changeme
+#       crontab: "0 22 * * *"
+#       emailuser: changeme
+#       emailpassword: changeme
+  
