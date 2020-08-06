@@ -16,7 +16,7 @@ metadata:
   labels:
     app: static-site
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: static-site
@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: blog-jfmatth
-        image: jfmatth/blog-jfmatth:1171078c14d307d4d175368c8c98d98d83ffa1fc
+        image: jfmatth/blog-jfmatth:9d8ddae9050a9fd240fffe91153b7006f2c25d90
         imagePullPolicy: Always
         ports:
         - containerPort: 80
