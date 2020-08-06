@@ -1,28 +1,28 @@
----
-apiVersion: helm.fluxcd.io/v1
-kind: HelmRelease
-metadata:
-  name: local
-  namespace: default
-  annotations:
-    fluxcd.io/locked_user: John Matthew <john@compunique.com>
-    fluxcd.io/locked: 'true'
-spec:
-  rollback:
-    enable: true
+# ---
+# apiVersion: helm.fluxcd.io/v1
+# kind: HelmRelease
+# metadata:
+#   name: local
+#   namespace: default
+#   annotations:
+#     fluxcd.io/locked_user: John Matthew <john@compunique.com>
+#     fluxcd.io/locked: 'true'
+# spec:
+#   rollback:
+#     enable: true
 
-  chart:
-    git: https://github.com/jfmatth/K8s-flux.git
-    ref: master
-    path: charts/aim-local
+#   chart:
+#     git: https://github.com/jfmatth/K8s-flux.git
+#     ref: master
+#     path: charts/aim-local
 
-  values:
-    jobs:
-      migrate: false
-      loadprices: true
-      ftplogin: changeme
-      ftppass: changeme
-      crontab: "0 22 * * *"
-      emailuser: changeme
-      emailpassword: changeme
+#   values:
+#     jobs:
+#       migrate: false
+#       loadprices: true
+#       ftplogin: changeme
+#       ftppass: changeme
+#       crontab: "0 22 * * *"
+#       emailuser: changeme
+#       emailpassword: changeme
   
