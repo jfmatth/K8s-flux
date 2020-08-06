@@ -20,7 +20,7 @@ export FLUX_FORWARD_NAMESPACE=flux
     
     Then add the Flux helm-operator via HELM
     ```
-    kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/1.1.0/deploy/crds.yaml
+    kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/1.2.0/deploy/crds.yaml
     helm repo add fluxcd https://charts.fluxcd.io
     helm upgrade -i helm-operator fluxcd/helm-operator \
     --namespace flux \
@@ -28,7 +28,10 @@ export FLUX_FORWARD_NAMESPACE=flux
     ```
 
     Note: If you get errors, check the following:
-    * ClusterRole,ClusterRoleBinding for flux and helm-operator
+    ```
+        kubectl get ClusterRole,ClusterRoleBinding
+    ```
+    Delete all roles for flux and helm-operator
 
     
 - Install Flux
