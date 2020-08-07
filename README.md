@@ -33,8 +33,22 @@ export FLUX_FORWARD_NAMESPACE=flux
     ```
     Delete all roles for flux and helm-operator
 
-    
+
+- Install Flux via Helm
+```
+export GHUSER="jfmatth"
+helm upgrade -i flux fluxcd/flux \
+--set git.user=${GHUSER} \
+--set git.email=${GHUSER}@users.noreply.github.com \
+--set git.url=git@github.com:${GHUSER}/K8s-flux \
+--set git.path=cluster-local \
+--set syncGarbageCollection.enabled=true \
+--namespace flux
+```
+
 - Install Flux
+
+
     Using https://docs.fluxcd.io/en/1.19.0/tutorials/get-started/ as a baseline.
 
     ```
@@ -50,6 +64,8 @@ export FLUX_FORWARD_NAMESPACE=flux
     Follow the instructions on putting the SSH identity key into your Repo
 
 ## Staging / Production (DO) cluster
+
+# NEED TO ADJUST FOR USING HELM ON FLUX INSTEAD OF INSTALL
 
 **CONNECT TO YOUR PRODUCTION CLUSTER**
 
