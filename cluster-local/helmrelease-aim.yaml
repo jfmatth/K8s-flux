@@ -28,6 +28,6 @@ spec:
  
     image:
       repository: jfmatth/aim-django
-      tag: 2.0
+      tag: v2.01
       pullPolicy: Always
       
