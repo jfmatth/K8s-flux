@@ -29,22 +29,21 @@ export FLUX_FORWARD_NAMESPACE=flux
 
     Note: If you get errors, check the following:
     ```
-        kubectl get ClusterRole,ClusterRoleBinding
+    kubectl delete ClusterRole/flux ClusterRole/helm-operator ClusterRoleBinding/flux ClusterRoleBinding/helm-operator
     ```
-    Delete all roles for flux and helm-operator
 
 
 - Install Flux via Helm
-```
-export GHUSER="jfmatth"
-helm upgrade -i flux fluxcd/flux \
---set git.user=${GHUSER} \
---set git.email=${GHUSER}@users.noreply.github.com \
---set git.url=git@github.com:${GHUSER}/K8s-flux \
---set git.path=cluster-local \
---set syncGarbageCollection.enabled=true \
---namespace flux
-```
+    ```
+    export GHUSER="jfmatth"
+    helm upgrade -i flux fluxcd/flux \
+    --set git.user=${GHUSER} \
+    --set git.email=${GHUSER}@users.noreply.github.com \
+    --set git.url=git@github.com:${GHUSER}/K8s-flux \
+    --set git.path=cluster-local \
+    --set syncGarbageCollection.enabled=true \
+    --namespace flux
+    ```
 
 - Install Flux
 
@@ -87,8 +86,9 @@ helm upgrade -i flux fluxcd/flux \
     ```
 
     Note: If you get errors, check the following:
-    * ClusterRole,ClusterRoleBinding for flux and helm-operator
-
+    ```
+    kubectl delete ClusterRole/flux ClusterRole/helm-operator ClusterRoleBinding/flux ClusterRoleBinding/helm-operator
+    ```
     
 - Install Flux
     Using https://docs.fluxcd.io/en/1.19.0/tutorials/get-started/ as a baseline.
