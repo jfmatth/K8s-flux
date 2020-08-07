@@ -2,8 +2,8 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: aim-local
-  namespace: default
+  name: aim-k8sprod
+  namespace: k8sprod
   annotations:
     fluxcd.io/locked_user: John Matthew <john@compunique.com>
     fluxcd.io/locked: 'true'
@@ -14,7 +14,7 @@ spec:
   chart:
     git: https://github.com/jfmatth/K8s-flux.git
     ref: master
-    path: charts/aim-local
+    path: charts/aim-k8sprod
 
 #  Chart value overrides can go here
 #  Override the jobs section from our Helm chart
@@ -30,6 +30,6 @@ spec:
  
     image:
       repository: jfmatth/aim-django
-      tag: v2.01
+      tag: v1.00
       pullPolicy: Always
       
