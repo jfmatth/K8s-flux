@@ -1,4 +1,10 @@
 ---
+  apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: k8sprod
+
+---
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
