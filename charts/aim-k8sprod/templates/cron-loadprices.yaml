@@ -34,65 +34,37 @@ spec:
                       key:  postgresql-password
 
                 - name: FTPPASS
-                  value: {{ .Values.jobs.ftppass }}
+                  valueFrom:
+                    configMapRef:
+                      name: aim-values
+                      key: ftppass
                 - name: FTPLOGIN
-                  value: {{ .Values.jobs.ftplogin }}
+                  valueFrom:
+                    configMapRef:
+                      name: aim-values
+                      key: ftplogin
 
                 - name: EMAIL_USER
-                  value: {{ .Values.jobs.emailuser }}
+                  valueFrom:
+                    configMapRef:
+                      name: aim-values
+                      key: emailuser
                 - name: EMAIL_PASSWORD
-                  value: {{ .Values.jobs.emailpassword }}
+                  valueFrom:
+                    configMapRef:
+                      name: aim-values
+                      key: emailpassword
 
-            # - name: {{ .Chart.Name }}-loadprices
-            #   image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-            #   command: ["python", "manage.py", "loadprices"]
-            #   env:
-            #     - name: DB_HOST
-            #       value: {{ template "postgres.fullname" . }}
-            #     - name: DB_NAME
-            #       value: {{ .Values.postgresql.postgresqlDatabase }}
-            #     - name: DB_PORT
-            #       value: "5432"
-            #     - name: DB_USER
-            #       value: {{ .Values.postgresql.postgresqlUsername }}
-            #     - name: DB_PASSWORD
-            #       valueFrom:
-            #         secretKeyRef:
-            #           name: {{ template "postgres.fullname" . }}              
-            #           key:  postgresql-password
+                #   - name: FTPPASS
+                #   value: {{ .Values.jobs.ftppass }}
+                # - name: FTPLOGIN
+                #   value: {{ .Values.jobs.ftplogin }}
 
-            #     - name: FTPPASS
-            #       value: {{ .Values.jobs.ftppass }}
-            #     - name: FTPLOGIN
-            #       value: {{ .Values.jobs.ftplogin }}
+                # - name: EMAIL_USER
+                #   value: {{ .Values.jobs.emailuser }}
+                # - name: EMAIL_PASSWORD
+                #   value: {{ .Values.jobs.emailpassword }}
 
-            #     - name: EMAIL_USER
-            #       value: {{ .Values.jobs.emailuser }}
-            #     - name: EMAIL_PASSWORD
-            #       value: {{ .Values.jobs.emailpassword }}
-
-            # - name: {{ .Chart.Name }}-advice
-            #   image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-            #   command: ["python", "manage.py", "advice"]
-            #   env:
-            #     - name: DB_HOST
-            #       value: {{ template "postgres.fullname" . }}
-            #     - name: DB_NAME
-            #       value: {{ .Values.postgresql.postgresqlDatabase }}
-            #     - name: DB_PORT
-            #       value: "5432"
-            #     - name: DB_USER
-            #       value: {{ .Values.postgresql.postgresqlUsername }}
-            #     - name: DB_PASSWORD
-            #       valueFrom:
-            #         secretKeyRef:
-            #           name: {{ template "postgres.fullname" . }}              
-            #           key:  postgresql-password
-
-            #     - name: EMAIL_USER
-            #       value: {{ .Values.jobs.emailuser }}
-            #     - name: EMAIL_PASSWORD
-            #       value: {{ .Values.jobs.emailpassword }}
                   
           restartPolicy: OnFailure
 {{- end }}
