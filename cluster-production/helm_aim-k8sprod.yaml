@@ -42,7 +42,7 @@ spec:
       annotations: 
         kubernetes.io/ingress.class: nginx
         kubernetes.io/tls-acme: "true"
-        cert-manager.io/issuer: "issuer-staging"
+        # cert-manager.io/issuer: "issuer-staging"
         nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
     
       hosts:
@@ -50,7 +50,7 @@ spec:
           paths: ['/']
     
       tls: 
-      - secretName: qa-sotb-tls
+      - secretName: qa-sotb-com
         hosts:
           - qa.stocksonthebeach.com
 
