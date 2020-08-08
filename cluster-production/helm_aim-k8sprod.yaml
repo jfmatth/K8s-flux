@@ -12,7 +12,6 @@ metadata:
   namespace: k8sprod
   annotations:
     fluxcd.io/automated: "true"
-    filter.fluxcd.io/chart-image: semver:~1.
 spec:
   rollback:
     enable: true
