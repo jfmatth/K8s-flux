@@ -35,23 +35,23 @@ spec:
 
                 - name: FTPPASS
                   valueFrom:
-                    configMapRef:
+                    configMapKeyRef:
                       name: aim-values
                       key: ftppass
                 - name: FTPLOGIN
                   valueFrom:
-                    configMapRef:
+                    configMapKeyRef:
                       name: aim-values
                       key: ftplogin
 
                 - name: EMAIL_USER
                   valueFrom:
-                    configMapRef:
+                    configMapKeyRef:
                       name: aim-values
                       key: emailuser
                 - name: EMAIL_PASSWORD
                   valueFrom:
-                    configMapRef:
+                    configMapKeyRef:
                       name: aim-values
                       key: emailpassword
 
