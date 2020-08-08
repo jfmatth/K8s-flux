@@ -4,7 +4,7 @@ metadata:
   name: qa-sotb-com
   namespace: k8sprod
 spec:
-  secretName: qa-sotb-tls
+  secretName: qa-sotb-com
   issuerRef:
     name: issuer-staging
   commonName: stocksonthebeach.com
