@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: qa-sotb-com
+  namespace: k8sprod
+spec:
+  secretName: qa-sotb-tls
+  issuerRef:
+    name: issuer-staging
+  commonName: stocksonthebeach.com
+  dnsNames:
+  - qa.stocksonthebeach.com
