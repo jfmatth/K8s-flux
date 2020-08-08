@@ -42,7 +42,7 @@ spec:
       annotations: 
         kubernetes.io/ingress.class: nginx
         kubernetes.io/tls-acme: "true"
-        cert-manager.io/cluster-issuer: issuer-staging
+        cert-manager.io/cluster-issuer: issuer-production
         nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
     
       hosts:
