@@ -17,6 +17,7 @@ spec:
           containers:
             - name: {{ .Chart.Name }}-loadprices
               image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
               command: ["./loadprices.sh"]
               env:
                 - name: DB_HOST
