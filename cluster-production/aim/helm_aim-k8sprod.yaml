@@ -10,8 +10,6 @@ kind: HelmRelease
 metadata:
   name: aim-k8sprod
   namespace: k8sprod
-  annotations:
-    fluxcd.io/automated: "true"
 spec:
   rollback:
     enable: true
