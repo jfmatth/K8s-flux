@@ -1,0 +1,1 @@
+{"jobID":"42ba540a-3add-c0b0-c355-f5590e7040cf","spec":{"type":"policy","cause":{"Message":"","User":"John Matthew \u003cjohn@compunique.com\u003e"},"spec":{"cert-manager:helmrelease/cert-manager":{"add":{},"remove":{"locked":"true","locked_msg":"true","locked_user":"true"}}}},"result":null}
