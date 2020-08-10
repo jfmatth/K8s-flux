@@ -14,9 +14,6 @@ metadata:
 
   annotations:
     fluxcd.io/automated: "true"
-    # fluxcd.io/tag.chart-image: semver:~1.0
-  filter.fluxcd.io/chart-image: semver:~1.0
-
 
 spec:
   rollback:
