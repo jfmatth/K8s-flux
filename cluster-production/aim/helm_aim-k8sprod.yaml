@@ -12,6 +12,11 @@ metadata:
   name: aim-k8sprod
   namespace: k8sprod
 
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: semver:~1.0
+
+    
 spec:
   rollback:
     enable: true
