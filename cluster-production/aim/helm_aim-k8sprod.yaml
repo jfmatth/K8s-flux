@@ -11,8 +11,8 @@ kind: HelmRelease
 metadata:
   name: aim-k8sprod
   namespace: k8sprod
-  # annotations:
-  #   fluxcd.io/automated: "true"
+  annotations:
+    fluxcd.io/automated: "true"
 
 spec:
   rollback:
@@ -41,18 +41,18 @@ spec:
       pullPolicy: Always
 
       ingress:
-      enabled: true
-      annotations: 
-        kubernetes.io/ingress.class: nginx
-        kubernetes.io/tls-acme: "true"
-        cert-manager.io/cluster-issuer: issuer-production
-        nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
+        enabled: true
+        annotations: 
+          kubernetes.io/ingress.class: nginx
+          kubernetes.io/tls-acme: "true"
+          cert-manager.io/cluster-issuer: issuer-production
+          nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
 
-      hosts:
-        - host: qa.stocksonthebeach.com
-          paths: ['/']
+        hosts:
+          - host: qa.stocksonthebeach.com
+            paths: ['/']
 
-      tls: 
-      - hosts:
-        - qa.stocksonthebeach.com
-        secretName: qa-sotb-com
+        tls: 
+        - hosts:
+          - qa.stocksonthebeach.com
+          secretName: qa-sotb-com
