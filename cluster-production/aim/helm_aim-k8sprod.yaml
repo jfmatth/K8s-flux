@@ -15,7 +15,6 @@ metadata:
     fluxcd.io/automated: "true"
     fluxcd.io/tag.chart-image: semver:~1.0
 
-  
 spec:
   rollback:
     enable: true
@@ -36,24 +35,24 @@ spec:
       crontab: "0 22 * * *"
       emailuser: changeme
       emailpassword: changeme
- 
+
     image:
       repository: jfmatth/aim-django
       tag: v1.01
       pullPolicy: Always
 
-    ingress:
+      ingress:
       enabled: true
       annotations: 
         kubernetes.io/ingress.class: nginx
         kubernetes.io/tls-acme: "true"
         cert-manager.io/cluster-issuer: issuer-production
         nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
-    
+
       hosts:
         - host: qa.stocksonthebeach.com
           paths: ['/']
-    
+
       tls: 
       - hosts:
         - qa.stocksonthebeach.com
