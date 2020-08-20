@@ -33,7 +33,7 @@ spec:
  
     image:
       repository: jfmatth/aim-django
-      tag: v1.01
+      tag: v1.03
       pullPolicy: Always
 
     ingress:
