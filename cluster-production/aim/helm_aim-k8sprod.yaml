@@ -5,11 +5,18 @@
     name: k8sprod
 
 ---
+
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: aim-k8sprod
   namespace: k8sprod
+
+  # annotations:
+  #   fluxcd.io/automated: "true"
+  #   filter.fluxcd.io/chart-image: semver:~1.0
+
+    
 spec:
   rollback:
     enable: true
@@ -30,7 +37,7 @@ spec:
       crontab: "0 22 * * *"
       emailuser: changeme
       emailpassword: changeme
- 
+
     image:
       repository: jfmatth/aim-django
       tag: v1.03
@@ -38,16 +45,17 @@ spec:
 
     ingress:
       enabled: true
+      
       annotations: 
         kubernetes.io/ingress.class: nginx
         kubernetes.io/tls-acme: "true"
         cert-manager.io/cluster-issuer: issuer-production
         nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
-    
+
       hosts:
         - host: qa.stocksonthebeach.com
           paths: ['/']
-    
+
       tls: 
       - hosts:
         - qa.stocksonthebeach.com
