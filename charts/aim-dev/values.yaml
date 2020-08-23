@@ -2,7 +2,7 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicaCount: 1
+replicaCount: 2
 
 image:
   repository: jfmatth/aim-django
@@ -36,22 +36,27 @@ service:
   port: 80
 
 ingress:
+
   enabled: true
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-    # cert-manager.io/issuer: letsencrypt-staging
-    # # nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
+  annotations: 
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+    cert-manager.io/cluster-issuer: issuer-production
+    nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
 
   hosts:
-    - host: master.mshome.net
+    - host: dev.stocksonthebeach.com
       paths: ['/']
 
-  tls: []
+  tls: 
+    - hosts:
+      - dev.stocksonthebeach.com
+      secretName: dev-sotb-com
+
 
 resources:
   requests:
-    cpu: 100m
+    cpu: 50m
     memory: 128Mi
   limits:
     cpu: 1000m
@@ -73,7 +78,7 @@ postgresql:
 
   resources:
     requests:
-      cpu: 250m
+      cpu: 50m
       memory: 256Mi
     limits:
       cpu: 1000m
@@ -82,7 +87,7 @@ postgresql:
 timestamp: "new"
 
 jobs:
-  loadprices: false
+  loadprices: true
   migrate: false
   ftplogin: changeme
   ftppass: changeme
