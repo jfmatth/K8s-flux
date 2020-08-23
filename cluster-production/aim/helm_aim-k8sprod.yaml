@@ -29,6 +29,9 @@ spec:
 #  Chart value overrides can go here
 #  Override the jobs section from our Helm chart
   values:
+
+    replicaCount: 2
+
     jobs:
       migrate: false
       loadprices: true
