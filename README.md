@@ -7,6 +7,17 @@ Using Flux CD and Flux Helm operators, I can maintain my clusters
 All HELM values should be kept in the helm values.yaml file, and not overriden in the flux YAML files, unless absolutely necessary.  This allows you to run helm charts directly w/o flux  
 
 
+## Folders
+Charts - Holds all HELM charts to be used for AIM  
+- aim-dev - development on DO cluster  
+- aim-k8sprod - production copy on DO cluster, mimics current VM code-base  
+- aim-laptop - laptop chart for proper ingress name, etc  
+
+cluster-local - FLUX local cluster definitions (not used much)  
+
+cluster-production - FLUX production Digital Ocean charts / etc.  
+
+
 ## Install Helm Operator CRD (all environments)
 Using https://docs.fluxcd.io/projects/helm-operator/en/stable/get-started/quickstart/
 
