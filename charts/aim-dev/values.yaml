@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: jfmatth/aim-django
-  tag: 2.0
+  tag: 2.02
   pullPolicy: Always
 
 imagePullSecrets: []
@@ -59,7 +59,6 @@ resources:
 
 nodeSelector: {}
 
-
 tolerations: []
 
 affinity: {}
@@ -84,7 +83,7 @@ timestamp: "new"
 
 jobs:
   loadprices: false
-  migrate: true
+  migrate: false
   ftplogin: changeme
   ftppass: changeme
   crontab: "0 22 * * *"

@@ -1,7 +1,11 @@
 # K8s-flux
 Using Flux CD and Flux Helm operators, I can maintain my clusters
 - Local cluster (laptop)
-- Production cluster (cluster on DO)
+- Production cluster (cluster on Digital Ocean)
+
+**IMPORTANT**  
+All HELM values should be kept in the helm values.yaml file, and not overriden in the flux YAML files, unless absolutely necessary.  This allows you to run helm charts directly w/o flux  
+
 
 ## Install Helm Operator CRD (all environments)
 Using https://docs.fluxcd.io/projects/helm-operator/en/stable/get-started/quickstart/
@@ -42,6 +46,7 @@ helm upgrade -i flux fluxcd/flux \
 ```
 
 ### Staging / Production (DO) cluster
+
 **CONNECT TO YOUR PRODUCTION CLUSTER**
 
 ```
@@ -59,3 +64,4 @@ Follow directions for the SSH key Identity
 ```
 fluxctl identity
 ```
+
