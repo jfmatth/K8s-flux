@@ -34,6 +34,10 @@ kubectl delete ClusterRole/flux ClusterRole/helm-operator ClusterRoleBinding/flu
 ## Install Flux via Helm
 
 ### Local (laptop) cluster
+
+You can develop locally with just HELM.
+
+
 ```
 export GHUSER="jfmatth"
 helm upgrade -i flux fluxcd/flux \
