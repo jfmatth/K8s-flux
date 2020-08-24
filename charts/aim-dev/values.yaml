@@ -6,7 +6,7 @@ replicaCount: 2
 
 image:
   repository: jfmatth/aim-django
-  tag: v2.03
+  tag: v2.04
   pullPolicy: Always
 
 imagePullSecrets: []
