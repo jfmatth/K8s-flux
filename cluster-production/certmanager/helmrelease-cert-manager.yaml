@@ -4,16 +4,16 @@ kind: Namespace
 metadata:
   name: cert-manager
 ---
-apiVersion: helm.fluxcd.io/v1
-kind: HelmRelease
-metadata:
-  name: cert-manager
-  namespace: cert-manager
+# apiVersion: helm.fluxcd.io/v1
+# kind: HelmRelease
+# metadata:
+#   name: cert-manager
+#   namespace: cert-manager
 
-spec:
-    chart:
-      repository: https://charts.jetstack.io/
-      name: cert-manager
-      version: v1.0.4
-    values:
-      installCRDs: true
+# spec:
+#     chart:
+#       repository: https://charts.jetstack.io/
+#       name: cert-manager
+#       version: v1.0.4
+#     values:
+#       installCRDs: true
