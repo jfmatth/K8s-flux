@@ -10,10 +10,6 @@ metadata:
   name: cert-manager
   namespace: cert-manager
 
-  annotations:
-    meta.helm.sh/release-name: cert-manager-cert-manager
-    meta.helm.sh/release-namespace: cert-manager
-
 spec:
     chart:
       repository: https://charts.jetstack.io/
