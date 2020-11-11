@@ -44,7 +44,7 @@ ingress:
     # # nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
 
   hosts:
-    - host: 192.168.1.71
+    - host: aim.home.lan
       paths: ['/']
 
   tls: []
