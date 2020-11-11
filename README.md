@@ -44,14 +44,13 @@ kubectl delete ClusterRole/flux ClusterRole/helm-operator ClusterRoleBinding/flu
 
 ## Install Flux via Helm
 
-### Local (laptop) cluster
+### Home cluster
 
 You can develop locally with just HELM.
 
 ```
 helm upgrade -i dev aim-dev --render-subchart-notes
 ```
-
 
 if you want to use FLUX locally.. see below  
 
@@ -61,7 +60,7 @@ helm upgrade -i flux fluxcd/flux \
 --set git.user=${GHUSER} \
 --set git.email=${GHUSER}@users.noreply.github.com \
 --set git.url=git@github.com:${GHUSER}/K8s-flux \
---set git.path=cluster-local \
+--set git.path=cluster-home \
 --set syncGarbageCollection.enabled=true \
 --namespace flux
 ```
