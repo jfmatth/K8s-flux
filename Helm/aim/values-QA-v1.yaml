@@ -22,6 +22,7 @@ ingress:
 
 
 postgresql:
+  postgresqlFullname: aim.pgo
   postgresqlDatabase: sotb
   postgresqlUsername: adminsyymgnc
   postgresqlPassword: changeme

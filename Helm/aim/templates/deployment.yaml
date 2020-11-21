@@ -34,19 +34,36 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
 
           env:
+            # - name: DB_HOST
+            #   value: {{ template "postgres.fullname" . }}
+            # - name: DB_NAME
+            #   value: {{ .Values.postgresql.postgresqlDatabase }}
+            # - name: DB_PORT
+            #   value: "5432"
+            # - name: DB_USER
+            #   value: {{ .Values.postgresql.postgresqlUsername }}
+            # - name: DB_PASSWORD
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: {{ template "postgres.fullname" . }}              
+            #       key:  postgresql-password
+            # - name: DB_HOST
+            #   value: {{ template "postgres.fullname" . }}
             - name: DB_HOST
-              value: {{ template "postgres.fullname" . }}
+              value: {{ .Values.postgresql.posgresqlFullname }}
             - name: DB_NAME
               value: {{ .Values.postgresql.postgresqlDatabase }}
             - name: DB_PORT
               value: "5432"
             - name: DB_USER
               value: {{ .Values.postgresql.postgresqlUsername }}
+            # - name: DB_PASSWORD
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: {{ template "postgres.fullname" . }}              
+            #       key:  postgresql-password
             - name: DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: {{ template "postgres.fullname" . }}              
-                  key:  postgresql-password
+              value: {{ .Values.postgresql.postgresqlPassword }}
 
           ports:
             - name: http
