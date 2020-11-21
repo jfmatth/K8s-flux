@@ -50,7 +50,7 @@ spec:
             # - name: DB_HOST
             #   value: {{ template "postgres.fullname" . }}
             - name: DB_HOST
-              value: {{ .Values.postgresql.posgresqlFullname }}
+              value: {{ .Values.postgresql.postgresqlFullname }}
             - name: DB_NAME
               value: {{ .Values.postgresql.postgresqlDatabase }}
             - name: DB_PORT
