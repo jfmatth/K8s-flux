@@ -4,14 +4,14 @@
 
 replicaCount: 1
 
-image:
-  repository: jfmatth/aim-django
-  tag: v2.03
-  pullPolicy: Always
+# image:
+#   repository: jfmatth/aim-django
+#   tag: v2.03
+#   pullPolicy: Always
 
-imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
+# imagePullSecrets: []
+# nameOverride: ""
+# fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
