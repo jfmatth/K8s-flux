@@ -1,0 +1,50 @@
+image:
+  repository: jfmatth/aim-django
+  tag: v1.03
+  pullPolicy: Always
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+ingress:
+  enabled: true
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+    # cert-manager.io/issuer: letsencrypt-staging
+
+  hosts:
+    - host: qa.stocksonthebeach.com
+      paths: ['/']
+
+  tls: []
+
+
+postgresql:
+  postgresqlFullname: sotb-v1-prod.database
+  postgresqlDatabase: sotb-v1-prod
+  postgresqlUsername: adminsyymgnc
+  postgresqlPassword: changeme
+
+  # image:
+  #   tag: 9.6.18
+
+  # resources:
+  #   requests:
+  #     cpu: 250m
+  #     memory: 256Mi
+  #   limits:
+  #     cpu: 1000m
+  #     memory: 1000Mi
+
+timestamp: "new"
+
+jobs:
+  loadprices: true
+  migrate: true
+  ftplogin: changeme
+  ftppass: changeme
+  crontab: "0 22 * * *"
+  emailuser: changeme
+  emailpassword: changeme
