@@ -22,27 +22,27 @@ ingress:
 
 
 postgresql:
-  postgresqlFullname: aim.pgo
-  postgresqlDatabase: sotb
+  postgresqlFullname: sotb-v1-qa.database
+  postgresqlDatabase: sotb-v1-qa
   postgresqlUsername: adminsyymgnc
   postgresqlPassword: changeme
 
-  image:
-    tag: 9.6.18
+  # image:
+  #   tag: 9.6.18
 
-  resources:
-    requests:
-      cpu: 250m
-      memory: 256Mi
-    limits:
-      cpu: 1000m
-      memory: 1000Mi
+  # resources:
+  #   requests:
+  #     cpu: 250m
+  #     memory: 256Mi
+  #   limits:
+  #     cpu: 1000m
+  #     memory: 1000Mi
 
 timestamp: "new"
 
 jobs:
   loadprices: true
-  migrate: false
+  migrate: true
   ftplogin: changeme
   ftppass: changeme
   crontab: "0 22 * * *"
