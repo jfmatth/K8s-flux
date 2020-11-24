@@ -23,7 +23,7 @@ ingress:
 
 postgresql:
   postgresqlFullname: sotb-v1-qa.database
-  postgresqlDatabase: sotb-v1-qa
+  postgresqlDatabase: sotb
   postgresqlUsername: adminsyymgnc
   postgresqlPassword: changeme
 
