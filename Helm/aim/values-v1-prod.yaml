@@ -1,3 +1,5 @@
+replicaCount: 4
+
 image:
   repository: jfmatth/aim-django
   tag: v1.03
