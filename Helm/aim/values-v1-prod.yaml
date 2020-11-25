@@ -53,6 +53,6 @@ jobs:
   migrate: true
   ftplogin: changeme
   ftppass: changeme
-  crontab: "0 22 * * *"
+  crontab: "0 23 * * *"
   emailuser: changeme
   emailpassword: changeme
