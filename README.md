@@ -1,4 +1,8 @@
 # K8s-flux
+
+# FLUX IS NO LONGER USED FOR THIS, but the Repo is being used for ArgoCD for now.
+
+
 Using Flux CD and Flux Helm operators, I can maintain my clusters
 - Local cluster (laptop)
 - Production cluster (cluster on Digital Ocean)
