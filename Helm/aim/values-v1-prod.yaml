@@ -35,16 +35,6 @@ postgresql:
   postgresqlUsername: adminsyymgnc
   postgresqlPassword: changeme
 
-  # image:
-  #   tag: 9.6.18
-
-  # resources:
-  #   requests:
-  #     cpu: 250m
-  #     memory: 256Mi
-  #   limits:
-  #     cpu: 1000m
-  #     memory: 1000Mi
 
 timestamp: "new"
 
