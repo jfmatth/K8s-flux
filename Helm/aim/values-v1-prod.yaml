@@ -19,15 +19,13 @@ ingress:
     nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
 
   hosts:
-    - host: qa.stocksonthebeach.com
+    - host: stocksonthebeach.com
       paths: ['/']
 
   tls: 
   - hosts:
-    - qa.stocksonthebeach.com
-    secretName: qa-sotb-com
-
-
+    - stocksonthebeach.com
+    secretName: prod-sotb-com
 
 postgresql:
   postgresqlFullname: sotb-v1-prod.database
