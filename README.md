@@ -2,6 +2,15 @@
 
 # FLUX IS NO LONGER USED FOR THIS, but the Repo is being used for ArgoCD for now.
 
+# Misc.
+
+## Backup
+pgo create schedule sotb-v1-qa  \
+--schedule="0 1 * * *"  \
+--schedule-type=pgbackrest  \
+--pgbackrest-backup-type=full \
+--schedule-opts="--repo1-retention-full=14"
+
 
 Using Flux CD and Flux Helm operators, I can maintain my clusters
 - Local cluster (laptop)
@@ -20,6 +29,9 @@ Charts - Holds all HELM charts to be used for AIM
 cluster-local - FLUX local cluster definitions (not used much)  
 
 cluster-production - FLUX production Digital Ocean charts / etc.  
+
+
+
 
 
 ## Install Helm Operator CRD (all environments)
