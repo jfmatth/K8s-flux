@@ -49,7 +49,7 @@ timestamp: "new"
 
 jobs:
   loadprices: true
-  migrate: true
+  migrate: false
   ftplogin: changeme
   ftppass: changeme
   crontab: "0 23 * * *"
