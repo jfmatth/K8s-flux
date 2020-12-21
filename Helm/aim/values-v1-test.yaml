@@ -19,7 +19,7 @@ ingress:
   #   nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
 
   hosts:
-    - host: test.192.168.1.200
+    - host: test.192.168.1.200.nip.io
       paths: ['/']
 
   # tls: 
