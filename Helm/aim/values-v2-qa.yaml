@@ -1,0 +1,46 @@
+replicaCount: 1
+
+image:
+  repository: jfmatth/aim-django
+  tag: v2.00
+  pullPolicy: Always
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+ingress:
+  enabled: true
+
+  annotations: 
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+    cert-manager.io/cluster-issuer: issuer-production
+    nginx.ingress.kubernetes.io/force-ssl-redirect	: "true"
+
+  hosts:
+    - host: qa-v2.stocksonthebeach.com
+      paths: ['/']
+
+  tls: 
+  - hosts:
+    - qa-v2.stocksonthebeach.com
+    secretName: qav2-sotb-com
+
+
+postgresql:
+  postgresqlFullname: sotb-v1-qa.database
+  postgresqlDatabase: sotb
+  postgresqlUsername: adminsyymgnc
+  postgresqlPassword: changeme
+
+timestamp: "new"
+
+jobs:
+  loadprices: true
+  migrate: true
+  ftplogin: changeme
+  ftppass: changeme
+  crontab: "0 23 * * *"
+  emailuser: changeme
+  emailpassword: changeme
